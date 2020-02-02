@@ -2,6 +2,7 @@ package gr.codehub.CollegeMarks.repository;
 
 import gr.codehub.CollegeMarks.model.Student;
 import lombok.Data;
+import lombok.SneakyThrows;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,30 +22,31 @@ public class Students {
     String cvsSplitBy = ",";
 
 
-    public Students(){
+    public Students() {
         students = new ArrayList<>();
     }
 
-    public int addStudent(Student s){
+    public int addStudent(Student s) {
         students.add(s);
         return students.size();
     }
 
-/*
+   // @SneakyThrows
     public Students(String filename) {
         this();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-            while ((line = br.readLine()) != null) {
-                String[] customer = line.split(",");
-                Student c = new Student(Integer.parseInt(customer[0]), customer[1], customer[2],customer[3]);
-                students.a
+        try (Scanner sc = new Scanner(new File(filename))) {
+            while (sc.hasNext()) {
+                String line = sc.nextLine();
+                String[] words = line.split(CSV_DELIMETER);
+                Student student = new Student(Integer.parseInt(words[0]), words[1], words[2], words[3]);
+
+                students.add(student);
             }
-        }
-        } catch (Exception e) {
+        } catch (Exception e){
 
         }
-*/
-
     }
+
+}
 

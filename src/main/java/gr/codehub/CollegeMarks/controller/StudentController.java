@@ -16,8 +16,8 @@ public class StudentController {
                 " Please select module or student.");
     }
 
-/*    @GetMapping("students")
+    @GetMapping("students")
     public Students getStudents(){
         return  iss.getStudents();
-    }*/
+    }
 }
