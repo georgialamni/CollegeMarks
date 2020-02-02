@@ -1,14 +1,14 @@
 package gr.codehub.CollegeMarks.controller;
 
 import gr.codehub.CollegeMarks.repository.Students;
-import gr.codehub.CollegeMarks.service.IStudentService;
+import gr.codehub.CollegeMarks.service.ICollegeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StudentController {
+public class CollegeController {
 
-    private IStudentService iss;
+    private ICollegeService iss;
 
     @GetMapping("")
     public String getIntro(){

@@ -2,11 +2,8 @@ package gr.codehub.CollegeMarks.repository;
 
 import gr.codehub.CollegeMarks.model.Student;
 import lombok.Data;
-import lombok.SneakyThrows;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -31,7 +28,6 @@ public class Students {
         return students.size();
     }
 
-   // @SneakyThrows
     public Students(String filename) {
         this();
 
@@ -43,10 +39,19 @@ public class Students {
 
                 students.add(student);
             }
-        } catch (Exception e){
+        } catch (Exception e) {
 
         }
     }
 
+    public Student getStudentById(int id) {
+
+        for (Student student : students) {
+            if (student.getId() == id)
+                return student;
+        }
+        return null;
+
+    }
 }
 
