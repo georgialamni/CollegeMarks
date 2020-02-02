@@ -10,8 +10,14 @@ public class StudentController {
 
     private IStudentService iss;
 
-    @GetMapping("students")
+    @GetMapping("")
+    public String getIntro(){
+        return  ("Welcome to college! " +
+                " Please select module or student.");
+    }
+
+/*    @GetMapping("students")
     public Students getStudents(){
         return  iss.getStudents();
-    }
+    }*/
 }
