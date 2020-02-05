@@ -45,12 +45,6 @@ public class Modules {
     }
 
     public Module getModuleById(int id) {
-
-        for (Module module : modules) {
-            if (module.getId() == id)
-                return module;
-        }
         return null;
-
     }
 }

@@ -9,4 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class College {
     private String name;
+    private int id;
+
+    public College(int parseInt) {
+        College college = new College();
+    }
 }

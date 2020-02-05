@@ -32,7 +32,7 @@ public class Colleges {
             while (sc.hasNext()) {
                 String line = sc.nextLine();
                 String[] words = line.split(CSV_DELIMETER);
-                College college = new College(Integer.parseInt(words[0]), words[1], words[2], words[3]);
+                College college = new College(Integer.parseInt(words[0]));
 
                 colleges.add(college);
             }
@@ -43,7 +43,7 @@ public class Colleges {
     public College getCollegeById(int id) {
 
         for (College college : colleges) {
-            if (college.getId() == id)
+            if ()
                 return college;
         }
         return null;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CollegeController {
 
-    private ICollegeService iss;
+    private ICollegeService cs;
 
     @GetMapping("")
     public String getIntro(){
@@ -18,6 +18,6 @@ public class CollegeController {
 
     @GetMapping("students")
     public Students getStudents(){
-        return  iss.getStudents();
+        return  cs.getStudents();
     }
 }
